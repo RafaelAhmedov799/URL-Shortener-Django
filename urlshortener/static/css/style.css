@@ -1,0 +1,31 @@
+* {
+	text-align: center;
+}
+body {
+	background-color: #dae3ec;
+}
+.form-container {
+	margin-top: 50px;
+}
+.url-input {
+	display: block;
+	margin: auto;
+	width: 30%;
+	font-size: 15px;
+}
+.form-container label {
+	font-size: 40px;
+}
+.old-url, .new-url {
+	font-size: 20px
+}
+.arrow {
+	font-size: 45px;
+	color: red;
+}
+.old-url {
+	color: blue;
+}
+.new-url {
+	color: green;
+}

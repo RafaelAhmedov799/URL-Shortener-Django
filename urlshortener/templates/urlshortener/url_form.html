@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Url shortener {% endblock title %}
+
+{% block content %}
+
+<div class="form-container">
+	<form method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button class="form-btn">Shorten</button>
+	</form>
+</div>
+
+{% if new_url and long_url %}
+<div class="urls">
+    <p class="old-url">Your old url:<br><a href="{{ long_url }}" target="_blank">{{ new_url }}</a></p>
+    
+	<p class="arrow">&darr;</p>
+	<p class="new-url">Your new short URL:<br><a href="{{ new_url }}" target="_blank">{{ new_url }}</a></p>
+</div>
+{% endif %}
+
+{% endblock content %}
+
